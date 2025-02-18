@@ -4,17 +4,6 @@ const cors = require('cors');
 const connectDB = require('./config/db');
 const mongoose = require('mongoose');
 
-// const app = require('./app');
-
-// const PORT = process.env.PORT || 5000;
-
-// app.listen(PORT, () => {
-//   console.log(`🚀 Sunucu ${PORT} portunda çalışıyor...`);
-// });
-// filepath: /d:/Development/Web Development/Ozkara-Motor-Yaglari/backend/src/server.js
-// filepath: /d:/Development/Web Development/Ozkara-Motor-Yaglari/backend/src/server.js
-// filepath: /d:/Development/Web Development/Ozkara-Motor-Yaglari/backend/src/server.js
-
 const authRoutes = require('./routes/authRoutes');
 const productRoutes = require('./routes/productRoutes');
 const appointmentRoutes = require('./routes/appointmentRoutes'); // Import your appointment routes
@@ -31,7 +20,7 @@ connectDB();
 
 // Enable CORS for all routes
 app.use(cors({
-  origin: 'https://ozkara.onrender.com/', // Frontend'in çalıştığı adres
+  origin: 'https://ozkara.onrender.com', // Frontend'in çalıştığı adres
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
