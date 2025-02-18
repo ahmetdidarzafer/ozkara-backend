@@ -4,10 +4,10 @@ const { protect } = require('../middleware/authMiddleware');
 const router = express.Router();
 
 // Debug middleware ekleyelim
-router.use((req, res, next) => {
-  console.log('Auth Route - Request Body:', req.body);
-  next();
-});
+// router.use((req, res, next) => {
+//   console.log('Auth Route - Request Body:', req.body);
+//   next();
+// });
 
 // Kullanıcı kaydı
 router.post('/register', register);
