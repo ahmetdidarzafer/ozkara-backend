@@ -20,7 +20,7 @@ connectDB();
 
 // Enable CORS for all routes
 app.use(cors({
-  origin: 'https://ozkara.onrender.com', // Frontend'in çalıştığı adres
+  origin: ['https://ozkara.onrender.com', 'http://localhost:5173'], // Frontend'in çalıştığı adres
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
